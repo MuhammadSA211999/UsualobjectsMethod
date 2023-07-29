@@ -34,5 +34,49 @@ function getInfo() {
     }
     return fullInfo.trimStart()
 }
+// console.log(getInfo());
 
-console.log(getInfo());
+
+// deleteing a object properties
+delete person["now"]
+// console.log(person)
+
+const nestedObj = {
+    name: 'Muhammad SA',
+    age: 24,
+    status: "Unmarried",
+    wife: {
+        name: "Gulbahar",
+        age: "Unknown",
+        status: "Unknown"
+    }
+}
+
+// accessing nested object properties
+const status = "status"
+const wifeStatus = nestedObj["wife"][status]
+// console.log(wifeStatus);
+
+// nested objects and arrays
+const myObj = {
+    name: "MSA",
+    age: 24,
+    cars: [
+        { name: "Ford", models: ["Fiesta", "Focus", "Mustang"] },
+        { name: "BMW", models: ["320", "X3", "X5"] },
+        { name: "Fiat", models: ["500", "Panda"] }
+    ]
+}
+const myCars = "cars"
+const models = "models"
+
+for (let car in myObj[myCars]) {
+    let allBrands = myObj[myCars][car]
+    console.log(allBrands.name);
+    for (let singleCarIndex in allBrands.models) {
+        const cars = allBrands[models][singleCarIndex]
+        console.log(cars);
+    }
+
+}
+
