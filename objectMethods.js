@@ -28,8 +28,9 @@ const uniInfo = person[uniName] + " " + person[uniResult]
 function getInfo() {
     let fullInfo = ""
     for (let key in person) {
-        let value = person[key]
-        fullInfo = fullInfo + " " + value
+        fullInfo += " " + person[key]
+        // let value = person[key]
+        // fullInfo = fullInfo + " " + value
     }
     return fullInfo.trimStart()
 }
