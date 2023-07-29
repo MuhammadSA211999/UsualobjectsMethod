@@ -72,11 +72,41 @@ const models = "models"
 
 for (let car in myObj[myCars]) {
     let allBrands = myObj[myCars][car]
-    console.log(allBrands.name);
+    // console.log(allBrands.name);
     for (let singleCarIndex in allBrands.models) {
         const cars = allBrands[models][singleCarIndex]
-        console.log(cars);
+        // console.log(cars);
     }
 
 }
+
+//objects methods
+const student = {
+    name: 'MSA',
+    age: 24,
+    institute: "NSTU",
+    uniCGPA: 3.23,
+    college: "GSC",
+    hscResult: 5,
+    born: "Sylhet",
+    now: 'Noakhali',
+
+    //objects method 
+    lightInfo: function () {
+        return `${this.name} is ${this.age} years old.`
+    }
+}
+// const info = student.lightInfo()
+const info = student["lightInfo"]() //evabe call kora zay, return value print korbe.
+console.log(info);
+
+student.educationInfo = function () {
+    return `${this.name} completed his HSC from ${this.college}`
+}
+
+const hsc = student["educationInfo"]()
+console.log(hsc);
+
+
+
 
