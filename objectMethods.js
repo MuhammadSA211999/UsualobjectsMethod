@@ -1,0 +1,2 @@
+// Object in JavaScript: An object is the collection of properties and methods. An object properties is an association between a name and a value.Usually, we called it's a (key:value) pairing. Properties value can be primitive, another object or a function. A object method is a property that contains a function defenation.
+// We can create an object using the Object() constructor
