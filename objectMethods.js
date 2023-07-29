@@ -16,10 +16,22 @@ const person = {
     born: "Sylhet",
     now: 'Noakhali',
 }
-myName = "name"
+const myName = "name"
 const name = person[myName]
 const hscInfo = person["college"] + " " + person["hscResult"]
 const uniName = "institute"
 const uniResult = "uniCGPA"
 const uniInfo = person[uniName] + " " + person[uniResult]
-console.log(hscInfo, uniInfo);
+// console.log(hscInfo, uniInfo);
+
+// object value accessing by ( for .... in )looping
+function getInfo() {
+    let fullInfo = ""
+    for (let key in person) {
+        let value = person[key]
+        fullInfo = fullInfo + " " + value
+    }
+    return fullInfo.trimStart()
+}
+
+console.log(getInfo());
